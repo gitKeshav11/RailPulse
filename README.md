@@ -11,31 +11,31 @@
 
 ## 📌 About The Project
 
-**RailPulse** is a backend application built using **Java & Spring Boot** that provides structured and reliable train-related data via RESTful APIs.  
-This project demonstrates clean backend architecture, database integration, and real-world API design.
+**RailPulse** is a backend application built using **Java & Spring Boot** that provides fast, reliable, and structured train-related data through RESTful APIs.  
+This project follows clean backend architecture and real-world development practices.
 
 ---
 
 ## ✨ Features
 
 - 🔍 Search trains between source & destination  
-- 🕒 Get train schedules and timings  
-- 🚉 Station-wise train listing  
+- 🕒 Train schedules and timings  
+- 🚉 Station-wise train lookup  
 - ⚙️ RESTful API architecture  
 - 🗄️ MySQL database integration  
-- 🛡️ Clean and scalable backend design  
+- 🛡️ Clean & scalable backend code  
 
 ---
 
 ## 🛠️ Tech Stack
 
-- **Language:** Java  
-- **Framework:** Spring Boot  
-- **Database:** MySQL  
-- **ORM:** Hibernate / JPA  
-- **Build Tool:** Maven  
-- **API Style:** REST  
-- **Version Control:** Git & GitHub  
+- **Java**
+- **Spring Boot**
+- **MySQL**
+- **Hibernate / JPA**
+- **Maven**
+- **REST API**
+- **Git & GitHub**
 
 ---
 
@@ -53,7 +53,7 @@ RailPulse/
 │   │   │   └── model/
 │   │   └── resources/
 │   │       └── application.properties
-│   │   └── test/
+│   └── test/
 │
 ├── pom.xml
 └── README.md
@@ -62,6 +62,12 @@ RailPulse/
 ---
 
 ## 🚀 Getting Started
+
+### ✅ Prerequisites
+- Java 17+
+- Maven
+- MySQL
+- Git
 
 ### 🔧 Installation & Run
 
@@ -81,11 +87,64 @@ mvn spring-boot:run
 http://localhost:8080/api
 ```
 
-### GET /trains
-Returns list of all trains.
+### 📍 Get All Trains
+```
+GET /trains
+```
 
-### POST /trains
-Adds a new train.
+### 📍 Get Train By ID
+```
+GET /trains/{id}
+```
+
+### 📍 Search Trains
+```
+GET /trains/search?source=Delhi&destination=Mumbai
+```
+
+### 📍 Add New Train
+```
+POST /trains
+```
+
+**Request Body**
+```json
+{
+  "trainName": "Rajdhani Express",
+  "source": "Delhi",
+  "destination": "Mumbai",
+  "departureTime": "16:30"
+}
+```
+
+---
+
+## 📸 Screenshots & Demo
+
+### 🔹 API Testing (Postman)
+![Postman Screenshot](screenshots/postman-api.png)
+
+### 🔹 Database Records
+![Database Screenshot](screenshots/database.png)
+
+### 🎥 Demo GIF
+![RailPulse Demo](demo/railpulse-demo.gif)
+
+---
+
+## 🚀 Future Enhancements
+
+- 🔐 JWT Authentication  
+- 📊 Admin Dashboard  
+- 📱 Frontend Integration  
+- ☁️ Cloud Deployment  
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome!  
+Fork the repository and submit a pull request.
 
 ---
 
@@ -99,4 +158,7 @@ Java Backend Developer | Spring Boot | REST APIs
 
 ---
 
-⭐ If you like this project, give it a star!
+## ⭐ Support
+
+If you like this project, please give it a ⭐ on GitHub.  
+Your support motivates me to build more projects 🚀
